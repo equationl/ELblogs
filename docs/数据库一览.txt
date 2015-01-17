@@ -1,0 +1,68 @@
+表名: *statistics - 统计相关信息
+				   visitPv int  -访问总pv
+			    	visitHomePv int  -访问主页pv
+		    		visitDowloadPv int  -访问下载页pv
+			    	visitOthersPv int  -访问其他页pv
+			    	visitShortTextPv int  -访问短文页pv
+			    	visitLongTextPv int  -访问日志页pv
+				
+				
+     *user  - 用户相关信息
+        ID int NOT NULL AUTO_INCREMENT
+        PRIMARY KEY(ID)  -用户ID(自动递增)
+        username varchar(16)  -用户名
+        password varchar(12)  -用户密码
+        group int  -分类
+        greateDate datetime  -注册日期
+        
+      
+     *shortText - 短文相关
+        ID int NOT NULL AUTO_INCREMENT
+        PRIMARY KEY(ID)  -文章id(自动递增)
+        context tinytext  -内容
+         dateTime datetime  -发表日期
+         group tinytext  -分类
+         visitor int  -浏览次数
+         
+         
+     *longText - 长文相关
+        ID int NOT NULL AUTO_INCREMENT
+        PRIMARY KEY(ID)  -文章id(自动递增)
+         context longtext  -内容
+         dateTime datetime  -发表日期
+         group tinytext  -分类
+         tittle tinytext  -标题
+         visitor int  -浏览次数
+         
+         
+     *comment - 评论相关
+         relatedId int  -评论目标id
+         for tinytext  -评论的类型
+         context mediumtext  -内容
+         dateTime datetime  -发表日期
+         userName tinytext  -评论人名字
+         userId int  -评论人id
+         
+         
+     *download - 下载信息相关
+       ID int NOT NULL AUTO_INCREMENT
+        PRIMARY KEY(ID)  -下载信息id(自动递增)
+        name tinytext  -文件名
+        context longtext  -介绍
+        changeLog mediumtext  -更新内容
+        url mediumtext  -文件地址
+        dateTime datetime  -上传日期
+        group tinytext  -分类
+        visitor int  -浏览次数
+        
+     *diyHome - 自定义首页内容
+        context longtext  -html内容
+        //id int  -表id(方便调用)
+        
+     *object_group - 对象类型
+        ID int NOT NULL AUTO_INCREMENT
+        PRIMARY KEY(ID)  -分类id(自动递增)
+        for tinytext  -对象(shortText,longText等)
+        name tinytext  -分类名
+        permission int  -权重类型
+        
