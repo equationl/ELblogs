@@ -1,0 +1,122 @@
+        body {background-color: #cccccc;
+        color: #666666;
+        }
+        /*链接无下划线*/
+        a{ text-decoration: none; }
+        /*链接颜色*/
+        a:link { color: #666666; }
+        a:visited { color: #666666; }
+        a:active { color: #666666; }
+        
+        .tittletext_red {color: #00000;
+        text-shadow:0 0 3px #FF0000;
+        font-size: 25px;
+        }
+        
+        .tittletext_white {color: #00000;
+        text-shadow:0 0 3px #000000;
+        font-size: 25px;
+        }
+        
+        .tittletext_yellow {color: #00000;
+        text-shadow:0 0 3px #FFB63A;
+        font-size: 25px;
+        }
+        
+	        .changebg {
+           width:50px;
+           /* height:50px; */
+           text-align:center;
+           background:red;
+           animation:changbg_c 5s;
+           display:inline-block;
+           -moz-animation:changbg_c 5s;
+           /* Firefox */
+           -webkit-animation: changbg_c 5s;
+           /* Safari and Chrome */
+           -o-animation:changbg_c 5s; /* Opera */
+           }
+           @keyframes changbg_c
+           {
+           0%   {background:red;}
+           25%  {background:yellow;}
+           50%  {background:blue;}
+           100% {background:green;}
+           }
+           @-moz-keyframes changbg_c
+           /* Firefox */
+           {
+           0%   {background:red;}
+           25%  {background:yellow;}
+           50%  {background:blue;}
+           100% {background:green;}
+           }
+           @-webkit-keyframes
+           changbg_c
+           /* Safari and Chrome */
+           {
+           0%   {background:red;}
+           25%  {background:yellow;}
+           50%  {background:blue;}
+           100% {background:green;}
+           }
+           @-o-keyframes changbg_c
+           /* Opera */
+           {
+           0%   {background:red;}
+           25%  {background:yellow;}
+           50%  {background:blue;}
+           100% {background:green;}
+           }
+           .shorttext {
+          /* text-align:center; */
+           border:2px solid #a1a1a1;
+           padding:10px 40px;
+           background:#dddddd;
+           width:200px;
+           border-radius:25px;
+           -moz-border-radius:25px;
+           /* 老的 Firefox */
+           }
+           .longtext{
+          /* width:300px;
+           height:100px; */
+           background-color:#dddddd;
+           -moz-box-shadow: 10px 10px 5px #888888;
+           /* 老的 Firefox */
+           box-shadow: 10px 10px 5px #888888;
+           }
+           .toptext{
+           border-style: outset;
+           }
+           .endtext{
+           border-style: outset;
+           border-color: #3AD3FF;
+           background: #16007B
+           }
+           .line{
+           background: #eeeeee;
+           height: 2px;
+           }
+           .bigline{
+           background: #000000;
+           height: 2px;
+           }
+           .menu{
+           position:fixed;
+           top: 0;
+           left: 41%;
+           opacity:0.7;
+           filter: alpha(opacity=70);
+           background-color:#09f; 
+           }
+           .menu_bg{
+           position:fixed;
+           top: 0;
+           opacity:0.7;
+           filter: alpha(opacity=70);
+           background-color:#000;
+           width:40%;height:100%;
+           text-align:left;
+           }
+
