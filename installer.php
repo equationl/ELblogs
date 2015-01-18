@@ -49,7 +49,7 @@ if(!empty($_POST["name"]))
          mysql_query("INSERT INTO user (username,
         password,
         `group`,
-        greateDate) VALUES ('equationl','548326424364',0,'".date('Y-m-d H:i:s',time())."')",$con);
+        greateDate) VALUES ('admin','adminpw',0,'".date('Y-m-d H:i:s',time())."')",$con);
         //短文
         mysql_query("CREATE TABLE shortText(ID int NOT NULL AUTO_INCREMENT,
         PRIMARY KEY(ID),
