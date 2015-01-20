@@ -70,7 +70,7 @@ mysql_query("UPDATE statistics SET visitPv = $visitPv+1 WHERE visitPv = $visitPv
      //指定id，直接进入内容浏览
      $result = mysql_query("SELECT * FROM shortText WHERE ID ='".$_GET["id"]."'");
 	   $row = mysql_fetch_array($result);
-	   echo '<div class="shorttext">'.get_dedata($row["context"]).'<div class="line"></div>'.$row["dateTime"].'-'.$row["group"].'<div class="bigline"></div><a href="reply.php?id='.$row["ID"].'&for=shorttext">回复:</a><br />';
+	   echo '<div class="shorttext">'.get_dedata($row["context"]).'<div class="line"></div>'.$row["dateTime"].'-'.$row["group"].'-'.$row["visitor"].'<div class="bigline"></div><a href="reply.php?id='.$row["ID"].'&for=shorttext">回复:</a><br />';
 	   //取出评论相关内容
 	   $result = mysql_query("SELECT * FROM comment WHERE relatedId = '".$_GET["id"]."' AND `for` = 'shortText'");
 	   $i = 0;

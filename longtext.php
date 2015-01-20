@@ -77,7 +77,7 @@ if (!empty($_GET["id"]))
   else
   {
      //指定id，直接进入内容浏览
-	   echo '<br />'.get_dedata($row_long["tittle"]).'<div class="longtext">'.get_dedata($row_long["context"]).'<div class="line"></div>'.$row_long["dateTime"].'-'.$row_long["group"].'<div class="bigline"></div><a href="reply.php?id='.$row_long["ID"].'&for=longtext">回复:</a><br />';
+	   echo '<br />'.get_dedata($row_long["tittle"]).'<div class="longtext">'.get_dedata($row_long["context"]).'<div class="line"></div>'.$row_long["dateTime"].'-'.$row_long["group"].'-'.$row_long["visitor"] .'<div class="bigline"></div><a href="reply.php?id='.$row_long["ID"].'&for=longtext">回复:</a><br />';
 	   //取出评论相关内容
 	   $result = mysql_query("SELECT * FROM comment WHERE relatedId = '".$_GET["id"]."' AND `for` = 'longText'");
 	   $i = 0;
